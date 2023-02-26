@@ -1,6 +1,7 @@
 import { Reactor, computed } from './reactor.js';
 
 const scores = new Reactor([]);
+
 const highScore = computed(() => {
     let highestVal = 0;
 
@@ -11,6 +12,7 @@ const highScore = computed(() => {
 
     return highestVal;
 });
+
 highsScore.subscribe(num => console.log('high score: ' + num));
 // high score: 0
 

@@ -2,12 +2,11 @@ let computeFunc
 
 export const Reactor = function(value){
     let _val = value
-    let _subscribers=new WeakSet()
+    let _subscribers=new Set() // weakSet iterable
 
 
 
     this.subscribe=(func)=>{
-
         _subscribers.add(func); 
         func(_val)
         // remove the subscriber
